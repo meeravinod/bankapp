@@ -46,6 +46,7 @@ export class LoginComponent implements OnInit {
   // login(){
   //   alert('login clicked')
   // }
+  
   acnoChange(event:any){
     this.acno=event.target.value
     console.log(this.acno);
@@ -59,3 +60,7 @@ export class LoginComponent implements OnInit {
   }
 
 }
+
+
+
+
