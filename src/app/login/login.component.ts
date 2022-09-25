@@ -26,38 +26,53 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  login(){
-    var acnum=this.acno
-    var psw=this.psw
-    let userDetails=this.userDetails
-    if(acnum in this.userDetails){
-    if(psw==userDetails[acnum]['password']){
-      alert('login success')
-    }
-    else{
-      alert('incorect password')
-    }
+//   login(){
+//     var acnum=this.acno
+//     var psw=this.psw
+//     let userDetails=this.userDetails
+//     if(acnum in this.userDetails){
+//     if(psw==userDetails[acnum]['password']){
+//       alert('login success')
+//     }
+//     else{
+//       alert('incorect password')
+//     }
+//   }
+//   else{
+//     alert('user not exist or incorrect ac number')
+//   }
+// }
+
+
+login(a:any,b:any){
+console.log(a.value);
+console.log(b.value);
+
+
+
+//using event binding using template rendering method
+  var acnum=a.value
+  var psw=b.value
+
+  let userDetails=this.userDetails
+  if(acnum in this.userDetails){
+  if(psw==userDetails[acnum]['password']){
+    alert('login success')
   }
   else{
-    alert('user not exist or incorrect ac number')
+    alert('incorect password')
   }
 }
+else{
+  alert('user not exist or incorrect ac number')
+}
+}
+
 
   // login(){
   //   alert('login clicked')
   // }
   
-  acnoChange(event:any){
-    this.acno=event.target.value
-    console.log(this.acno);
-    
-    
-  }
-  pswChange(event:any){
-    this.psw=event.target.value
-    console.log(this.psw);
-    
-  }
 
 }
 
