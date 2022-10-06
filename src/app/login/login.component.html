@@ -2,15 +2,17 @@
 <div class="text-white ms-5 p-3"><h5>{{aim}}</h5></div>
 
 <div class="container w-25 p-3 mt-5" style="background: rgb(0,0,0,0.5);">
-    <h1 class="text-center text-white">Login Page</h1>
+    <h1 class="text-center text-white">Login</h1>
+   <form (ngSubmit)="login()"> 
     <div class="p-2 mt-2">
-        <input id="acid" type="text" [placeholder]="acnt" #acno (change)="acnoChange($event)" class="form-control">
+        <input name="acnum" id="acid" type="text" [placeholder]="acnt" [(ngModel)]="acno" class="form-control">
     </div>
     <div class="p-2 mt-2">
-        <input id="pid" type="password" placeholder="Password" #psw  class="form-control">
+        <input name="psw" id="pid" type="password" placeholder="Password" [(ngModel)]="psw"  class="form-control">
     </div>
     <div class="p-2 mt-2 text-center"> 
-        <button class="btn btn-success" type="button" (click)="login(acno,psw)">login</button>
-        <p class="text-white p-4">new user? <a href="" style="text-decoration:none ;" class="text-info">Register</a></p>
+        <button class="btn btn-success" type="submit">login</button>
+        <p class="text-white p-4">new user? <a href="" style="text-decoration:none ;" routerLink="register" class="text-info">Register</a></p>
     </div>
+    </form>
 </div>

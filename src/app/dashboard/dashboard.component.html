@@ -1,0 +1,50 @@
+<div class="p-4 mt-3 ms-3">
+    <h1 class="text-white">Welcome {{user}} !!</h1>
+</div>
+
+<div class="ps-5 pe-5 ms-3 bg-light text-center" style="height:50px; width:300px ; border-radius:10px; align-items: center;">
+    <a routerLink="/transaction">View transaction history</a>    
+    <!-- a) Click cheyumbo transactn page lek edirect aavan vendi aanu mukalil a tag il href maati routerLink koduthath, pinne
+    eth file lek aano redirect aavendath, aa file nte path aanu routerLink nte ullil koduthath. b) ipo nilkunna page il kudi thanne
+    redirect aavathe nere namk povenda pagelek redirect aavan aanu "/" ittu koduthath(veroru path nte akathu ninnaanu vere oru path ne
+    call cheyunathengil "/" ittu venam call cheyyan). -->
+
+</div>
+
+<div class="container w-25 p-3 mt-5" style="background: rgb(0,0,0,0.5);">
+    <h1 class="text-center text-white">Deposit</h1>
+    <form (ngSubmit)="deposit()">
+        <div class="p-2 mt-2">
+        <input name="acnumber" id="acno1" type="text" placeholder="Enter ac number" [(ngModel)]="acnum" class="form-control">
+    </div>
+    <div class="p-2 mt-2">
+        <input name="password" id="psw" type="password" placeholder="Enter password" [(ngModel)]="pswrd" class="form-control">
+    </div>
+    <div class="p-2 mt-2">
+        <input name="amount" id="amnt" type="text" placeholder="amount to deposit" [(ngModel)]="amnt"  class="form-control">
+    </div>
+    <div class="p-2 mt-2 text-center"> 
+        <button class="btn btn-success" type="submit">Deposit</button><br><br>
+    </div>
+</form>
+</div>
+
+
+
+<div class="container w-25 p-3 mt-5" style="background: rgb(0,0,0,0.5);">
+    <h1 class="text-center text-white">Withdraw</h1>
+    <form (ngSubmit)="withdraw()">
+        <div class="p-2 mt-2">
+        <input name="acnumber1" id="acno1" type="text" placeholder="Enter ac number" [(ngModel)]="acnum1" class="form-control">
+    </div>
+    <div class="p-2 mt-2">
+        <input name="password1" id="psw" type="password" placeholder="Enter Password" [(ngModel)]="pswrd1" class="form-control">
+    </div>
+    <div class="p-2 mt-2">
+        <input name="amount1" id="amnt" type="text" placeholder="amount to withdraw" [(ngModel)]="amnt1"  class="form-control">
+    </div>
+    <div class="p-2 mt-2 text-center"> 
+        <button class="btn btn-success" type="submit">withdraw</button><br><br>
+    </div>
+</form>
+</div>
